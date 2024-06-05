@@ -1,0 +1,35 @@
+{
+  "name": "three-voxel-builder",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/three-voxel-builder/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/esbuild:esbuild",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "main": "libs/three-voxel-builder/src/index.ts",
+        "outputPath": "dist/libs/three-voxel-builder",
+        "outputFileName": "main.js",
+        "tsConfig": "libs/three-voxel-builder/tsconfig.lib.json",
+        "assets": [
+          {
+            "glob": "libs/three-voxel-builder/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      },
+      "configurations": {
+        "development": {
+          "minify": false
+        },
+        "production": {
+          "minify": true
+        }
+      }
+    }
+  }
+}
