@@ -1,5 +1,5 @@
 import './three-preview.element.css';
-import {threeVoxelBuilder} from '@voxel-builder/three-voxel-builder';
+import { threeVoxelBuilder } from '@voxel-builder/three-voxel-builder';
 
 export class ThreePreviewElement extends HTMLElement {
   connectedCallback() {
